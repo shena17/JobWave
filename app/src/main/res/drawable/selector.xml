@@ -3,13 +3,12 @@
 
     <item
         android:state_checked="true"
-        android:drawable="@color/blue"
-        android:color="@color/blue"/>
+        android:drawable="@color/darkmodeblue"
+        android:color="@color/darkmodeblue"/>
 
     <item
         android:state_checked="false"
-        android:drawable="@color/grey"
-        android:color="@color/grey"/>
+        style="@style/navbar"/>
 
 
 </selector>

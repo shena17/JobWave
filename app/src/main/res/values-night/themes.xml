@@ -40,4 +40,11 @@
     <style name="dashboard">
         <item name="android:background">@color/darkgrey</item>
     </style>
+
+    <!--    Dashboard nav-->
+    <style name="navbar">
+        <item name="android:color">@color/lightgrey</item>
+        <item name="android:drawable">@color/lightgrey</item>
+    </style>
+
 </resources>

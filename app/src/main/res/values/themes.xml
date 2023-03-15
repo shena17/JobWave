@@ -38,6 +38,14 @@
 
     <!--    Dashboard background-->
     <style name="dashboard">
-        <item name="android:background">#F4F0E9</item>
+        <item name="android:background">#D5FFFEFC</item>
     </style>
+
+<!--    Dashboard nav-->
+    <style name="navbar">
+        <item name="android:color">@color/grey</item>
+        <item name="android:drawable">@color/grey</item>
+    </style>
+
+
 </resources>
