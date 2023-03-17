@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbarSize="0dp"
+    tools:context=".ReviewSuportServiceRequests">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/logoView11"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/blue"
+                android:padding="10dp"
+                android:transitionName="logo_image" />
+
+            <View
+                android:id="@+id/waves11"
+                android:layout_width="match_parent"
+                android:layout_height="250dp"
+                android:background="@drawable/wave" />
+
+            <View
+                android:id="@+id/userIcon"
+                android:layout_width="124dp"
+                android:layout_height="123dp"
+                android:layout_gravity="center"
+                android:background="@drawable/ic_person" />
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="180dp"
+                android:layout_height="58dp"
+                android:layout_gravity="bottom|center|center_horizontal"
+                android:background="#FFFFFF"
+                android:fontFamily="@font/archivo_black"
+                android:gravity="center|top"
+                android:text="Anna Gomez"
+                android:textColor="#757575"
+                android:textSize="25sp"
+                android:textStyle="bold" />
+
+        </FrameLayout>
+    </RelativeLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="489dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="483dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textView14"
+                android:layout_width="204dp"
+                android:layout_height="32dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="-5dp"
+                android:fontFamily="@font/archivo_black"
+                android:gravity="center|top"
+                android:text="annagomez@gmail.com"
+                android:textSize="15dp" />
+
+            <TextView
+                android:id="@+id/textView15"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Concerns : "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView16"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="I am currently a university undergraduate, and I am concerned about the online platforms where I can improve my professional qualifications with verified certificates."
+                android:textStyle="normal" />
+
+            <TextView
+                android:id="@+id/textView17"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Reply : "
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="10dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="Dear User," />
+
+            <TextView
+                android:id="@+id/textView6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_weight="1"
+                    android:width="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:minWidth="10dp"
+                    android:text="UPDATE REPLY" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_weight="1"
+                    android:width="15dp"
+                    android:backgroundTint="@color/blue"
+                    android:minWidth="10dp"
+                    android:text="DELETE REPLY" />
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
