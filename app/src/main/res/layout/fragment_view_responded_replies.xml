@@ -103,35 +103,57 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="28dp"
                 android:fontFamily="@font/archivo_black"
-                android:text="Reply :  "
+                android:text="Reply : "
                 android:textStyle="bold" />
 
-            <EditText
-                android:id="@+id/editTextTextMultiLine2"
+            <TextView
+                android:id="@+id/textView3"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginStart="30dp"
                 android:layout_marginTop="10dp"
                 android:layout_marginEnd="28dp"
-                android:ems="10"
-                android:fontFamily="sans-serif-light"
-                android:gravity="start|top"
-                android:inputType="textMultiLine"
-                android:text="Type Reply "
-                android:textStyle="italic" />
+                android:fontFamily="@font/archivo_black"
+                android:text="Dear User," />
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/dashboardNavBtn2"
-                style="@style/Button"
+            <TextView
+                android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginStart="120dp"
-                android:layout_marginTop="50dp"
-                android:layout_marginEnd="120dp"
-                android:layout_marginBottom="5dp"
-                android:width="50dp"
-                android:minWidth="150dp"
-                android:text="POST REPLY" />
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="28dp"
+                android:fontFamily="@font/archivo_black"
+                android:text="TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView TextView" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/button2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_weight="1"
+                    android:width="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:minWidth="10dp"
+                    android:text="UPDATE REPLY" />
+
+                <Button
+                    android:id="@+id/button3"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_weight="1"
+                    android:width="15dp"
+                    android:backgroundTint="@color/blue"
+                    android:minWidth="10dp"
+                    android:text="DELETE REPLY" />
+            </LinearLayout>
 
         </LinearLayout>
 

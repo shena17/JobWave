@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [Review_Support_Service_Requests.newInstance] factory method to
+ * Use the [ViewRespondedReplies.newInstance] factory method to
  * create an instance of this fragment.
  */
-class Review_Support_Service_Requests : Fragment() {
+class ViewRespondedReplies : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,11 +34,7 @@ class Review_Support_Service_Requests : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(
-            R.layout.fragment_review__support__service__requests,
-            container,
-            false
-        )
+        return inflater.inflate(R.layout.fragment_view_responded_replies, container, false)
     }
 
     companion object {
@@ -48,12 +44,12 @@ class Review_Support_Service_Requests : Fragment() {
          *
          * @param param1 Parameter 1.
          * @param param2 Parameter 2.
-         * @return A new instance of fragment Review_Support_Service_Requests.
+         * @return A new instance of fragment ViewRespondedReplies.
          */
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            Review_Support_Service_Requests().apply {
+            ViewRespondedReplies().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
