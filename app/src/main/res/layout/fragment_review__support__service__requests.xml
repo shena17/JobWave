@@ -117,7 +117,7 @@
                 android:fontFamily="sans-serif-light"
                 android:gravity="start|top"
                 android:inputType="textMultiLine"
-                android:text="Type Reply"
+                android:text="Type Reply "
                 android:textStyle="italic" />
 
             <androidx.appcompat.widget.AppCompatButton
