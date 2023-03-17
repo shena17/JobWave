@@ -103,7 +103,7 @@
                 android:layout_marginTop="20dp"
                 android:layout_marginEnd="28dp"
                 android:fontFamily="@font/archivo_black"
-                android:text="Reply : "
+                android:text="Reply :  "
                 android:textStyle="bold" />
 
             <EditText
