@@ -24,6 +24,11 @@
         <item name="android:textColor">@color/grey</item>
     </style>
 
+    <!--    Text-->
+    <style name="TextSecondary">
+        <item name="android:textColor">@color/black</item>
+    </style>
+
     <!--    Button-->
     <style name="Button">
         <item name="android:background">@color/blue</item>
@@ -45,6 +50,15 @@
     <style name="navbar">
         <item name="android:color">@color/grey</item>
         <item name="android:drawable">@color/grey</item>
+    </style>
+
+<!--    Job view-->
+    <style name="jobText">
+        <item name="android:textColor">@color/darkblue</item>
+    </style>
+
+    <style name="jobCompany">
+        <item name="android:textColor">@color/blue</item>
     </style>
 
 

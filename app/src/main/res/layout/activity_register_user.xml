@@ -159,7 +159,8 @@
                         android:overScrollMode="always"
                         android:scrollbars="vertical"
                         android:scrollbarStyle="insideInset"
-                        android:scrollHorizontally="false"/>
+                        android:scrollHorizontally="false"
+                        />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
