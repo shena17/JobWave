@@ -16,6 +16,16 @@
             android:layout_height="wrap_content"
             android:orientation="vertical">
 
+            <TextView
+                style="@style/jobText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/amiko_semibold"
+                android:text="Starred"
+                android:textSize="24sp"
+                android:paddingHorizontal="20dp"
+                android:layout_marginTop="20dp"/>
+
             <androidx.cardview.widget.CardView
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
