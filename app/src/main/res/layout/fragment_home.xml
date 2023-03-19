@@ -1,17 +1,711 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:card_view="http://schemas.android.com/tools"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Home">
+    android:orientation="vertical"
+    tools:context=".Home"
+    style="@style/dashboard">
 
-
-        <TextView
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Home Tab"
-            android:gravity="center"
-            android:textSize="30sp"/>
+            android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="15dp">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="70dp"
+                            app:srcCompat="@drawable/logo_blue"
+                            android:padding="10dp"/>
+
+                        <TextView
+                            style="@style/Text"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="20dp"
+                            android:fontFamily="@font/amiko_semibold"
+                            android:text="Hello"
+                            android:textSize="20sp" />
+
+                        <TextView
+                            style="@style/jobText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/amiko_semibold"
+                            android:text="@string/UserName"
+                            android:textSize="24sp" />
+
+<!--                        WIDGETS-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="match_parent"
+                                    android:background="@color/grey"
+                                    app:cardCornerRadius="10dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="#BAE5F4"
+                                            android:orientation="vertical"
+                                            android:padding="8dp"
+                                            android:gravity="center">
 
 
-</FrameLayout>
+                                                <ImageView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    app:srcCompat="@drawable/home_white" />
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:orientation="vertical">
+
+                                                        <TextView
+                                                            style="@style/TextSecondary"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:gravity="center"
+                                                            android:text="10.8k"
+                                                            android:textSize="18sp"
+                                                            android:textStyle="bold"
+                                                            android:layout_marginBottom="2dp"/>
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="2dp"
+                                                            android:gravity="center"
+                                                            android:text="Remote Jobs"
+                                                            android:textSize="14sp"
+                                                            android:textStyle="bold"
+                                                            android:textColor="@color/darkGreyIcons"/>
+
+
+                                                </LinearLayout>
+
+                                        </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="200dp"
+                                            android:orientation="vertical"
+                                            android:layout_alignParentStart="true">
+
+
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1">
+
+                                                <androidx.cardview.widget.CardView
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    app:cardCornerRadius="10dp"
+                                                    app:cardElevation="5dp"
+                                                    app:cardUseCompatPadding="true">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            android:orientation="horizontal"
+                                                            android:paddingHorizontal="20dp"
+                                                            android:paddingVertical="5dp"
+                                                            android:background="#E2D2FE">
+
+
+                                                                <RelativeLayout
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_weight="3">
+                                                                        <LinearLayout
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="match_parent"
+                                                                            android:orientation="vertical">
+
+                                                                        <ImageView
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_weight="1"
+                                                                            app:srcCompat="@drawable/home_building" />
+                                                                        </LinearLayout>
+
+                                                                </RelativeLayout>
+
+                                                                <RelativeLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_weight="1">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:layout_marginTop="5dp"
+                                                                    android:orientation="vertical"
+                                                                    android:layout_marginStart="10dp"
+                                                                    android:gravity="center">
+
+                                                                        <TextView
+                                                                            style="@style/TextSecondary"
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="8.2k"
+                                                                            android:textSize="20sp"
+                                                                            android:textStyle="bold"/>
+
+                                                                        <TextView
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:text="Full time"
+                                                                            android:textSize="14sp"
+                                                                            android:textStyle="bold"
+                                                                            android:textColor="@color/darkGreyIcons"/>
+
+
+                                                                </LinearLayout>
+
+                                                                </RelativeLayout>
+
+                                                        </LinearLayout>
+
+                                                </androidx.cardview.widget.CardView>
+
+                                                </RelativeLayout>
+
+                                                <RelativeLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_weight="1">
+
+
+                                                        <androidx.cardview.widget.CardView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="match_parent"
+                                                            app:cardCornerRadius="10dp"
+                                                            app:cardElevation="5dp"
+                                                            app:cardUseCompatPadding="true">
+
+                                                                <LinearLayout
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="match_parent"
+                                                                    android:orientation="horizontal"
+                                                                    android:paddingHorizontal="20dp"
+                                                                    android:paddingVertical="5dp"
+                                                                    android:background="#CCF0BF">
+
+
+                                                                        <RelativeLayout
+                                                                            android:layout_width="wrap_content"
+                                                                            android:layout_height="match_parent"
+                                                                            android:layout_weight="3">
+                                                                                <LinearLayout
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:orientation="vertical">
+
+                                                                                        <ImageView
+                                                                                            android:layout_width="match_parent"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:layout_weight="1"
+                                                                                            app:srcCompat="@drawable/part_time" />
+                                                                                </LinearLayout>
+
+                                                                        </RelativeLayout>
+
+                                                                        <RelativeLayout
+                                                                            android:layout_width="match_parent"
+                                                                            android:layout_height="wrap_content"
+                                                                            android:layout_weight="1">
+
+                                                                                <LinearLayout
+                                                                                    android:layout_width="match_parent"
+                                                                                    android:layout_height="match_parent"
+                                                                                    android:layout_marginTop="5dp"
+                                                                                    android:orientation="vertical"
+                                                                                    android:layout_marginStart="10dp"
+                                                                                    android:gravity="center">
+
+                                                                                        <TextView
+                                                                                            style="@style/TextSecondary"
+                                                                                            android:layout_width="match_parent"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:text="5.5k"
+                                                                                            android:textSize="20sp"
+                                                                                            android:textStyle="bold"/>
+
+                                                                                        <TextView
+                                                                                            android:layout_width="match_parent"
+                                                                                            android:layout_height="wrap_content"
+                                                                                            android:text="Part time"
+                                                                                            android:textSize="14sp"
+                                                                                            android:textStyle="bold"
+                                                                                            android:textColor="@color/darkGreyIcons"/>
+
+
+                                                                                </LinearLayout>
+
+                                                                        </RelativeLayout>
+
+                                                                </LinearLayout>
+
+                                                        </androidx.cardview.widget.CardView>
+
+                                                </RelativeLayout>
+
+                                        </LinearLayout>
+
+                                </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+<!--                        SHORTCUTS-->
+                        <TextView
+                            style="@style/jobText"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/amiko_semibold"
+                            android:text="Shortcuts"
+                            android:textSize="24sp"
+                            android:layout_marginTop="30dp"/>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp">
+
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            android:background="@color/grey"
+                                            app:cardCornerRadius="10dp"
+                                            app:cardElevation="5dp"
+                                            app:cardUseCompatPadding="true">
+
+                                                <LinearLayout
+                                                    android:id="@+id/jobsNav"
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="#1E043F7F"
+                                                    android:orientation="vertical"
+                                                    android:padding="8dp"
+                                                    android:gravity="center">
+
+
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            app:srcCompat="@drawable/home_jobs" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="5dp"
+                                                            android:orientation="vertical">
+
+                                                                <TextView
+                                                                    style="@style/jobText"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="Jobs"
+                                                                    android:textSize="18sp"
+                                                                    android:textStyle="bold"/>
+
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="25.5k"
+                                                                    android:textSize="14sp"
+                                                                    android:textStyle="bold"
+                                                                    android:textColor="@color/darkGreyIcons"/>
+
+
+                                                        </LinearLayout>
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            app:cardCornerRadius="10dp"
+                                            app:cardElevation="5dp"
+                                            app:cardUseCompatPadding="true">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="#2F77047F"
+                                                    android:orientation="vertical"
+                                                    android:padding="8dp"
+                                                    android:gravity="center">
+
+
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            app:srcCompat="@drawable/home_fav" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="5dp"
+                                                            android:orientation="vertical">
+
+                                                                <TextView
+                                                                    style="@style/jobText"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="Starred"
+                                                                    android:textSize="18sp"
+                                                                    android:textStyle="bold"/>
+
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="4"
+                                                                    android:textSize="14sp"
+                                                                    android:textStyle="bold"
+                                                                    android:textColor="@color/darkGreyIcons"/>
+
+
+                                                        </LinearLayout>
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="0dp"
+                                    android:layout_height="match_parent"
+                                    android:layout_weight="1">
+
+                                        <androidx.cardview.widget.CardView
+                                            android:layout_width="match_parent"
+                                            android:layout_height="match_parent"
+                                            app:cardCornerRadius="10dp"
+                                            app:cardElevation="5dp"
+                                            app:cardUseCompatPadding="true">
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="match_parent"
+                                                    android:background="#3C7F2B04"
+                                                    android:orientation="vertical"
+                                                    android:padding="8dp"
+                                                    android:gravity="center">
+
+
+                                                        <ImageView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            app:srcCompat="@drawable/home_profile" />
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginTop="5dp"
+                                                            android:orientation="vertical">
+
+                                                                <TextView
+                                                                    style="@style/jobText"
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="Profile"
+                                                                    android:textSize="18sp"
+                                                                    android:textStyle="bold"/>
+
+                                                                <TextView
+                                                                    android:layout_width="match_parent"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:gravity="center"
+                                                                    android:text="50%"
+                                                                    android:textSize="14sp"
+                                                                    android:textStyle="bold"
+                                                                    android:textColor="@color/darkGreyIcons"/>
+
+
+                                                        </LinearLayout>
+
+                                                </LinearLayout>
+
+                                        </androidx.cardview.widget.CardView>
+
+                                </RelativeLayout>
+
+
+                        </LinearLayout>
+
+
+
+<!--                        STARRED-->
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:layout_marginTop="30dp">
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content">
+
+                                        <TextView
+                                            style="@style/jobText"
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:fontFamily="@font/amiko_semibold"
+                                            android:text="Recent Job List"
+                                            android:textSize="24sp" />
+
+                                        <TextView
+                                            style="@style/Text"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="match_parent"
+                                            android:layout_alignParentEnd="true"
+                                            android:layout_marginBottom="13dp"
+                                            android:padding="5dp"
+                                            android:fontFamily="@font/amiko_semibold"
+                                            android:text="See all"
+                                            android:textSize="14sp"/>
+
+
+                                </RelativeLayout>
+
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/grey"
+                                    app:cardCornerRadius="20dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="8dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentStart="true"
+                                                            android:gravity="left"
+                                                            android:orientation="horizontal"
+                                                            android:padding="1dp">
+
+
+                                                                <ImageView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    app:srcCompat="@drawable/apple_job" />
+
+                                                                <TextView
+                                                                    style="@style/jobText"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_marginStart="10dp"
+                                                                    android:text="@string/jobtitle"
+                                                                    android:textSize="18sp"
+                                                                    android:textStyle="bold" />
+
+
+
+                                                        </LinearLayout>
+                                                        <ImageView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            app:srcCompat="@drawable/fav_marked"
+                                                            android:layout_alignParentEnd="true"/>
+
+                                                </RelativeLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:orientation="vertical">
+
+                                                        <TextView
+                                                            style="@style/jobCompany"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="25dp"
+                                                            android:layout_marginBottom="10dp"
+                                                            android:text="@string/company"
+                                                            android:textSize="18sp"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="25dp"
+                                                            android:layout_marginBottom="10dp"
+                                                            android:text="@string/jobDescription"
+                                                            android:textSize="14sp"
+                                                            android:textStyle="bold" />
+
+
+                                                </LinearLayout>
+
+                                        </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+                                <androidx.cardview.widget.CardView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:background="@color/grey"
+                                    app:cardCornerRadius="20dp"
+                                    app:cardElevation="5dp"
+                                    app:cardUseCompatPadding="true">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="vertical"
+                                            android:padding="8dp">
+
+                                                <RelativeLayout
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content">
+
+                                                        <LinearLayout
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_alignParentStart="true"
+                                                            android:gravity="left"
+                                                            android:orientation="horizontal"
+                                                            android:padding="1dp">
+
+
+                                                                <ImageView
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    app:srcCompat="@drawable/apple_job" />
+
+                                                                <TextView
+                                                                    style="@style/jobText"
+                                                                    android:layout_width="wrap_content"
+                                                                    android:layout_height="wrap_content"
+                                                                    android:layout_gravity="center"
+                                                                    android:layout_marginStart="10dp"
+                                                                    android:text="@string/jobtitle"
+                                                                    android:textSize="18sp"
+                                                                    android:textStyle="bold" />
+
+
+
+                                                        </LinearLayout>
+                                                        <ImageView
+                                                            android:layout_width="wrap_content"
+                                                            android:layout_height="wrap_content"
+                                                            app:srcCompat="@drawable/fav_marked"
+                                                            android:layout_alignParentEnd="true"/>
+
+                                                </RelativeLayout>
+
+                                                <LinearLayout
+                                                    android:layout_width="match_parent"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="5dp"
+                                                    android:orientation="vertical">
+
+                                                        <TextView
+                                                            style="@style/jobCompany"
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="25dp"
+                                                            android:layout_marginBottom="10dp"
+                                                            android:text="@string/company"
+                                                            android:textSize="18sp"
+                                                            android:textStyle="bold" />
+
+                                                        <TextView
+                                                            android:layout_width="match_parent"
+                                                            android:layout_height="wrap_content"
+                                                            android:layout_marginStart="25dp"
+                                                            android:layout_marginBottom="10dp"
+                                                            android:text="@string/jobDescription"
+                                                            android:textSize="14sp"
+                                                            android:textStyle="bold" />
+
+
+                                                </LinearLayout>
+
+                                        </LinearLayout>
+
+                                </androidx.cardview.widget.CardView>
+
+
+                        </LinearLayout>
+
+
+
+
+
+                </LinearLayout>
+
+        </ScrollView>
+
+
+
+</LinearLayout>
