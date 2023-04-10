@@ -20,4 +20,10 @@
         android:name="com.example.jobwave.Profile"
         android:label="fragment_profile"
         tools:layout="@layout/fragment_profile" />
+    <fragment
+        android:id="@+id/starred"
+        android:name="com.example.jobwave.Starred"
+        android:label="fragment_starred"
+        tools:layout="@layout/fragment_starred" />
+
 </navigation>
