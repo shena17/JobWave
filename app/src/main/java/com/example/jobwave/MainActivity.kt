@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
         welcome.startAnimation(topAnimation)
 
         //Splash screen
-        val splashScreenTimeout = 4000
+        val splashScreenTimeout = 2000
         val homeIntent = Intent(this@MainActivity, Login::class.java)
 
         Handler().postDelayed({
