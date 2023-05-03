@@ -8,6 +8,10 @@ android {
     namespace 'com.example.jobwave'
     compileSdk 33
 
+    buildFeatures {
+        viewBinding = true
+    }
+
     defaultConfig {
         applicationId "com.example.jobwave"
         minSdk 22
