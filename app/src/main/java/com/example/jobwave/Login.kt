@@ -42,18 +42,20 @@ class Login : AppCompatActivity() {
             return
         }
 
-        val email = emailInput.editText?.text.toString()
+        val email = emailInput.editText?.text.toString().trim()
         val password = passwordInput.editText?.text.toString()
 
         auth.signInWithEmailAndPassword(email, password)
             .addOnCompleteListener(this) { task ->
                 if (task.isSuccessful) {
+                    Log.d(TAG, "signInWithEmail:success")
                     // Sign in success, update UI with the signed-in user's information
                     val intent = Intent(this, Dashboard::class.java)
                     startActivity(intent)
-
+                    finish()
                     Toast.makeText(baseContext, "Logged In", Toast.LENGTH_SHORT).show()
                 } else {
+                    Log.w(TAG, "signInWithEmail:failure", task.exception)
                     // If sign in fails, display a message to the user.
 //                    Toast.makeText(
 //                        baseContext,
@@ -64,5 +66,17 @@ class Login : AppCompatActivity() {
             }.addOnFailureListener{
                 Toast.makeText(this, "${it.localizedMessage}", Toast.LENGTH_SHORT).show()
             }
+    }
+
+    override fun onStart() {
+        super.onStart()
+        if(auth.currentUser == null){
+            Toast.makeText(this, "Login to Continue", Toast.LENGTH_SHORT).show()
+        }else{
+            val homeIntent = Intent(this, Dashboard::class.java)
+            startActivity(homeIntent)
+            finish()
+            Toast.makeText(baseContext, "Logged In", Toast.LENGTH_SHORT).show()
+        }
     }
 }
