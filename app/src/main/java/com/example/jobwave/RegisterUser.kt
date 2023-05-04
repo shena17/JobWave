@@ -1,8 +1,10 @@
 package com.example.jobwave
 
+import android.content.ContentValues.TAG
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -63,6 +65,7 @@ class RegisterUser : AppCompatActivity() {
         val fullName = inputName.editText?.text.toString()
         val email = inputEmail.editText?.text.toString()
         val job = inputJob.editText?.text.toString()
+        val intro = inputJob.editText?.text.toString()
         val phone = inputPhone.editText?.text.toString()
         val description = inputDescription.editText?.text.toString()
         val password = inputPassword.editText?.text.toString()
@@ -73,11 +76,11 @@ class RegisterUser : AppCompatActivity() {
 
                     val databaseReference = database.reference.child("Users").child(auth.currentUser!!.uid)
 
-                    val users : Users = Users(fullName, email, job, phone, description, auth.currentUser!!.uid)
+                    val users : Users = Users(fullName, email, job, intro, phone, description, auth.currentUser!!.uid)
 
                     databaseReference.setValue(users).addOnCompleteListener {
                         if(it.isSuccessful){
-
+                            Log.d(TAG, "createUserWithEmail:success")
                             //Sign in success, update UI with the signed-in user's information
                             val intent = Intent(this, Login::class.java)
                             startActivity(intent)
@@ -87,6 +90,7 @@ class RegisterUser : AppCompatActivity() {
                     }
 
                 } else {
+                    Log.w(TAG, "createUserWithEmail:failure", task.exception)
                     // If sign in fails, display a message to the user.
 //                    Toast.makeText(
 //                        baseContext,

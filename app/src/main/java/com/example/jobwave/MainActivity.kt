@@ -10,13 +10,10 @@ import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var auth:FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
-        auth = FirebaseAuth.getInstance()
 
         //Animations
         val topAnimation = AnimationUtils.loadAnimation(this, R.anim.top_animation)
@@ -31,14 +28,10 @@ class MainActivity : AppCompatActivity() {
 
 
         Handler().postDelayed({
-            if(auth.currentUser == null){
                 val intent = Intent(this, Login::class.java)
                 startActivity(intent)
-            }else{
-                val homeIntent = Intent(this@MainActivity, Login::class.java)
-                startActivity(homeIntent)
-                finish()
-            }
+
         }, splashScreenTimeout.toLong())
     }
+
 }
