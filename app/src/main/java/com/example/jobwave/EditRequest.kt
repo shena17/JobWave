@@ -13,10 +13,10 @@ private const val ARG_PARAM2 = "param2"
 
 /**
  * A simple [Fragment] subclass.
- * Use the [ViewRespondedReplies.newInstance] factory method to
+ * Use the [EditRequest.newInstance] factory method to
  * create an instance of this fragment.
  */
-class ViewRespondedReplies : Fragment() {
+class EditRequest : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
@@ -34,7 +34,7 @@ class ViewRespondedReplies : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_view_responded_replies, container, false)
+        return inflater.inflate(R.layout.fragment_edit_request, container, false)
     }
 
     companion object {
@@ -49,7 +49,7 @@ class ViewRespondedReplies : Fragment() {
         // TODO: Rename and change types and number of parameters
         @JvmStatic
         fun newInstance(param1: String, param2: String) =
-            ViewRespondedReplies().apply {
+            EditRequest().apply {
                 arguments = Bundle().apply {
                     putString(ARG_PARAM1, param1)
                     putString(ARG_PARAM2, param2)
