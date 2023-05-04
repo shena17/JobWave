@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    tools:context=".Support_Services">
+    tools:context=".SupportServices">
 
     <ImageView
         android:id="@+id/logoView4"

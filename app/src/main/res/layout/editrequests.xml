@@ -6,7 +6,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:scrollbarSize="0dp"
-    tools:context=".ReviewSuportServiceRequests">
+    tools:context=".ReviewSupportServiceRequest">
 
     <FrameLayout
         android:layout_width="match_parent"
