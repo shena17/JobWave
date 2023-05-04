@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="horizontalPadding">20dp</dimen>
+    <dimen name="verticalPadding">10dp</dimen>
+    <dimen name="textSizeHeading">24sp</dimen>
+    <dimen name="textFields">16sp</dimen>
+
+    <dimen name="paddingHorizontal">20dp</dimen>
+    <dimen name="paddingVertical">10dp</dimen>
+    <dimen name="headingSize">24sp</dimen>
+    <dimen name="textSize">16sp</dimen>
+</resources>

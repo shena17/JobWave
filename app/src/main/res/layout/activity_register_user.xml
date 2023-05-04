@@ -92,7 +92,7 @@
 
                 <!--        Email-->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/email"
+                    android:id="@+id/emailReg"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -159,13 +159,14 @@
                         android:overScrollMode="always"
                         android:scrollbars="vertical"
                         android:scrollbarStyle="insideInset"
-                        android:scrollHorizontally="false"/>
+                        android:scrollHorizontally="false"
+                        />
 
                 </com.google.android.material.textfield.TextInputLayout>
 
                 <!--        Password    -->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/password"
+                    android:id="@+id/passwordReg"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -183,6 +184,7 @@
 
                 <!--        Submit-->
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/signup"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"

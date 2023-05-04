@@ -1,50 +1,73 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context=".AdminMenu">
-    <TextView
-        android:id="@+id/textView4"
-        android:layout_height="wrap_content"
-        android:layout_width="wrap_content"
-        android:layout_marginStart="40dp"
-        android:layout_marginTop="65dp"
-        android:text="Admin"
-        android:textColor="@color/blue"
-        android:textSize="28sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
 
-    <TextView
-        android:id="@+id/textView5"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="40dp"
-        android:text="Welcome"
-        android:textColor="@color/blue"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView4" />
-
-
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:padding="10dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        android:layout_height="wrap_content">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/logoView"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@color/blue"
+                android:padding="10dp"
+                android:transitionName="logo_image" />
+
+            <View
+                android:id="@+id/waves"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:background="@drawable/wave" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="30dp"
+                android:gravity="center"
+                android:text="ADMIN"
+                android:textColor="@color/white"
+                android:textSize="28sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Welcome"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:gravity="center"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:clipToPadding="false"
             android:gravity="center"
             android:orientation="horizontal">
@@ -54,7 +77,8 @@
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="#00000000"
+                android:background="@color/grey"
+                app:cardCornerRadius="15dp"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -69,21 +93,18 @@
                         android:layout_height="64dp"
                         android:layout_marginTop="10dp"
                         android:padding="14dp"
-                        android:src="@drawable/approve"
-                        app:tint="#000000" />
+                        android:src="@drawable/approve" />
 
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="APPROVE"
-                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:background="@color/black" />
+                        android:layout_height="0dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -91,7 +112,6 @@
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="Company"
-                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -99,11 +119,12 @@
             </androidx.cardview.widget.CardView>
 
             <androidx.cardview.widget.CardView
+                android:background="@color/grey"
+                app:cardCornerRadius="15dp"
                 android:id="@+id/manageAds"
                 android:layout_width="120dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="#00000000"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -117,8 +138,7 @@
                         android:layout_width="64dp"
                         android:layout_height="80dp"
                         android:padding="11dp"
-                        android:src="@drawable/manage"
-                        app:tint="@color/black" />
+                        android:src="@drawable/manage" />
 
 
                     <TextView
@@ -126,13 +146,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="MANAGE"
-                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:background="@color/black" />
+                        android:layout_height="0dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -140,7 +158,6 @@
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="Ads"
-                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -157,11 +174,12 @@
             android:orientation="horizontal">
 
             <androidx.cardview.widget.CardView
+                android:background="@color/grey"
+                app:cardCornerRadius="15dp"
                 android:id="@+id/manageStaff"
                 android:layout_width="260dp"
                 android:layout_height="140dp"
                 android:layout_margin="10dp"
-                android:backgroundTint="#00000000"
                 android:clickable="true"
                 android:focusable="true">
 
@@ -183,13 +201,11 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="5dp"
                         android:text="MANAGE"
-                        android:textColor="@color/black"
                         android:textStyle="bold" />
 
                     <View
                         android:layout_width="match_parent"
-                        android:layout_height="0dp"
-                        android:background="@color/black" />
+                        android:layout_height="0dp" />
 
                     <TextView
                         android:layout_width="wrap_content"
@@ -197,7 +213,6 @@
                         android:gravity="center"
                         android:padding="5dp"
                         android:text="Support staff"
-                        android:textColor="@color/black"
                         android:textSize="12sp" />
 
                 </LinearLayout>
@@ -206,21 +221,15 @@
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/Login"
-            android:layout_width="196dp"
-            android:layout_height="60dp"
-            android:layout_marginTop="44dp"
-            android:layout_marginLeft="95dp"
-            android:backgroundTint="@color/blue"
-            android:text="LOGOUT"
-            android:textColor="@color/white"
-            android:onClick="logout_houseOwner"
-            app:cornerRadius="10dp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.497"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password" />
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/signOut"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="SIGN OUT"
+            android:textStyle="bold"
+            style="@style/Button"
+            android:layout_margin="15dp"/>
 
     </LinearLayout>
-</androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -1,59 +1,108 @@
 package com.example.jobwave
 
+import android.content.ContentValues.TAG
+import android.content.Intent
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.view.inputmethod.InputBinding
+import android.widget.ProgressBar
+import android.widget.TextView
+import android.widget.Toast
+import androidx.annotation.NonNull
+import androidx.appcompat.widget.AppCompatButton
+import androidx.navigation.fragment.findNavController
+import com.example.jobwave.databinding.FragmentProfileBinding
+import com.google.android.gms.tasks.Task
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.FirebaseUser
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.database.*
+import com.google.firebase.database.ktx.database
+import com.google.firebase.ktx.Firebase
 
-// TODO: Rename parameter arguments, choose names that match
-// the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
 private const val ARG_PARAM1 = "param1"
 private const val ARG_PARAM2 = "param2"
 
-/**
- * A simple [Fragment] subclass.
- * Use the [Profile.newInstance] factory method to
- * create an instance of this fragment.
- */
 class Profile : Fragment() {
-    // TODO: Rename and change types of parameters
-    private var param1: String? = null
-    private var param2: String? = null
 
-    override fun onCreate(savedInstanceState: Bundle?) {
-        super.onCreate(savedInstanceState)
-        arguments?.let {
-            param1 = it.getString(ARG_PARAM1)
-            param2 = it.getString(ARG_PARAM2)
-        }
-    }
+    private lateinit var auth: FirebaseAuth
+    private lateinit var database: DatabaseReference
+    private lateinit var user : Users
+    private lateinit var uid : String
+
+    private var _binding: FragmentProfileBinding?= null
+    private val binding get() = _binding!!
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_profile, container, false)
+        // Initialize Firebase Auth
+        _binding = FragmentProfileBinding.inflate(inflater, container, false)
+
+        auth = FirebaseAuth.getInstance()
+        uid = auth.currentUser?.uid.toString()
+
+        database = FirebaseDatabase.getInstance().getReference("Users")
+
+
+        if(uid.isEmpty()){
+            Toast.makeText(activity,"Sign in again!",Toast.LENGTH_SHORT).show();
+            requireActivity().run {
+                startActivity(Intent(this, Login::class.java))
+                finish()
+            }
+        }else{
+            database.child(uid).addValueEventListener(object : ValueEventListener{
+                override fun onDataChange(snapshot: DataSnapshot) {
+
+                    user = snapshot.getValue(Users::class.java)!!
+                    binding.fullNameProfile.setText(user.fullName)
+                    binding.emailProfile.setText(user.email)
+                    binding.jobProfile.setText(user.job)
+                    binding.intro.setText(user.intro)
+                    binding.phoneProfile.setText(user.phone)
+                    binding.descriptionProfile.setText(user.description)
+                }
+
+                override fun onCancelled(error: DatabaseError) {
+                    Toast.makeText(activity, "Failed to get User data!", Toast.LENGTH_SHORT).show()
+                }
+            })
+        }
+
+        return binding.root
     }
 
-    companion object {
-        /**
-         * Use this factory method to create a new instance of
-         * this fragment using the provided parameters.
-         *
-         * @param param1 Parameter 1.
-         * @param param2 Parameter 2.
-         * @return A new instance of fragment Profile.
-         */
-        // TODO: Rename and change types and number of parameters
-        @JvmStatic
-        fun newInstance(param1: String, param2: String) =
-            Profile().apply {
-                arguments = Bundle().apply {
-                    putString(ARG_PARAM1, param1)
-                    putString(ARG_PARAM2, param2)
-                }
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val editProfileBtn = view.findViewById<AppCompatButton>(R.id.editProfileBtn)
+        editProfileBtn.setOnClickListener{
+            requireActivity().run {
+                startActivity(Intent(this, EditProfile::class.java))
+                finish()
             }
+        }
+
+        val signOutBtn = view.findViewById<AppCompatButton>(R.id.signOut)
+
+        signOutBtn.setOnClickListener{
+            requireActivity().run {
+                //Init and attach
+                auth = FirebaseAuth.getInstance();
+
+                //Call signOut()
+                auth.signOut();
+                startActivity(Intent(this, Login::class.java))
+                finish()
+            }
+        }
     }
+
+
+
 }
