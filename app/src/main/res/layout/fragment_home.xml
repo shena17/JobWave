@@ -19,6 +19,7 @@
                     android:orientation="vertical"
                     android:paddingHorizontal="15dp">
 
+
                         <ImageView
                             android:layout_width="match_parent"
                             android:layout_height="70dp"
@@ -41,6 +42,7 @@
                             android:fontFamily="@font/amiko_semibold"
                             android:text="@string/UserName"
                             android:textSize="24sp" />
+
 
 <!--                        WIDGETS-->
                         <LinearLayout
