@@ -25,4 +25,5 @@
         android:name="com.example.jobwave.Starred"
         android:label="fragment_starred"
         tools:layout="@layout/fragment_starred" />
+
 </navigation>
