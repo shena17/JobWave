@@ -124,7 +124,7 @@
 
                 <!--        Phone-->
                 <com.google.android.material.textfield.TextInputLayout
-                    android:id="@+id/phone"
+                    android:id="@+id/companyPhone"
                     style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
@@ -194,10 +194,27 @@
 
                 </com.google.android.material.textfield.TextInputLayout>
 
+                <!--        Password    -->
+                <com.google.android.material.textfield.TextInputLayout
+                    android:id="@+id/companyPwd"
+                    style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:hint="Password"
+                    app:passwordToggleEnabled="true">
 
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:inputType="textPassword" />
+
+                </com.google.android.material.textfield.TextInputLayout>
 
                 <!--        Submit-->
                 <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/regCompany"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginTop="20dp"

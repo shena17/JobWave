@@ -7,5 +7,6 @@ data class Users(
     var intro:String?=null,
     var phone: String?=null,
     var description: String?=null,
+    var role: String?=null,
     var uid: String?=null,
 )

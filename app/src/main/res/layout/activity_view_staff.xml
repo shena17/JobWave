@@ -3,7 +3,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
     android:orientation="vertical"
     tools:ignore="viewStaff"
     xmlns:app="http://schemas.android.com/apk/res-auto"
@@ -73,7 +72,6 @@
                             android:layout_marginStart="25dp"
                             android:layout_marginBottom="10dp"
                             android:text="@string/Owner"
-                            android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -137,7 +135,6 @@
                             android:layout_marginStart="25dp"
                             android:layout_marginBottom="10dp"
                             android:text="@string/compAddress"
-                            android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -201,7 +198,6 @@
                             android:layout_marginStart="25dp"
                             android:layout_marginBottom="10dp"
                             android:text="@string/compEmail"
-                            android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
@@ -265,7 +261,6 @@
                             android:layout_marginStart="25dp"
                             android:layout_marginBottom="10dp"
                             android:text="@string/compContact"
-                            android:textColor="@color/black"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 

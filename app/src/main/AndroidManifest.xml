@@ -21,6 +21,20 @@
 
         </activity>
         <activity
+            android:name=".EmployerDashboard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".ViewStaff"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ManageAds"
             android:exported="false">
             <meta-data

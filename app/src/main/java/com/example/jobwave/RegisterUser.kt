@@ -68,6 +68,7 @@ class RegisterUser : AppCompatActivity() {
         val intro = inputJob.editText?.text.toString()
         val phone = inputPhone.editText?.text.toString()
         val description = inputDescription.editText?.text.toString()
+        val role = "User"
         val password = inputPassword.editText?.text.toString()
 
         auth.createUserWithEmailAndPassword(email, password)
@@ -76,7 +77,7 @@ class RegisterUser : AppCompatActivity() {
 
                     val databaseReference = database.reference.child("Users").child(auth.currentUser!!.uid)
 
-                    val users : Users = Users(fullName, email, job, intro, phone, description, auth.currentUser!!.uid)
+                    val users : Users = Users(fullName, email, job, intro, phone, description, role, auth.currentUser!!.uid)
 
                     databaseReference.setValue(users).addOnCompleteListener {
                         if(it.isSuccessful){
@@ -87,6 +88,7 @@ class RegisterUser : AppCompatActivity() {
 
                             Toast.makeText(baseContext, "Registered Successfully", Toast.LENGTH_SHORT).show()
                         }
+
                     }
 
                 } else {
