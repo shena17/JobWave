@@ -27,7 +27,7 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:gravity="center"
-                android:text="Emp Name"
+                android:text="Name"
                 android:textColor="@color/darkgrey"
                 android:textSize="25dp"
                 android:textStyle="normal" />

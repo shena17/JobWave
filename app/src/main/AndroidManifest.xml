@@ -13,12 +13,23 @@
         android:theme="@style/Theme.JobWave"
         tools:targetApi="31">
         <activity
+            android:name=".SupportServiceRequest"
+            android:exported="false" />
+        <activity
+            android:name=".SupportServices"
+            android:exported="false" />
+        <activity
+            android:name=".ReviewSupportServiceRequest"
+            android:exported="false" />
+        <activity
+            android:name=".EditrequestsActivity"
+            android:exported="false" />
+        <activity
             android:name=".EditProfile"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
         </activity>
         <activity
             android:name=".ManageAds"
