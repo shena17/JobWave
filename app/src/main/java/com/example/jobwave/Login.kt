@@ -74,9 +74,8 @@ class Login : AppCompatActivity() {
                                             val intent = Intent(this@Login, Dashboard::class.java)
                                             startActivity(intent)
                                             Toast.makeText(baseContext, "User Logged In", Toast.LENGTH_SHORT).show()
-                                        }
-                                        else if(user.role == "Staff"){
-                                            val intent = Intent(this@Login, Dashboard::class.java)
+                                        }else if(user.role == "Staff"){
+                                            val intent = Intent(this@Login, SupportServiceRequest::class.java)
                                             startActivity(intent)
                                             Toast.makeText(baseContext, "Staff Logged In", Toast.LENGTH_SHORT).show()
                                         }
