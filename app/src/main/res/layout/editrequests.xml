@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:scrollbarSize="0dp"
+    tools:context=".ReviewSupportServiceRequest">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="489dp">
+
+        <LinearLayout
+            android:layout_width="411dp"
+            android:layout_height="483dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="50dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Name" />
+
+            <EditText
+                android:id="@+id/etEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Email" />
+
+            <EditText
+                android:id="@+id/etConcern"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="28dp"
+                android:ems="10"
+                android:inputType="textPersonName"
+                android:text="Concern" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="69dp"
+                android:layout_marginTop="30dp"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/btnEditData"
+                    android:layout_width="308dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="35dp"
+                    android:layout_marginTop="25dp"
+                    android:layout_marginEnd="35dp"
+                    android:layout_weight="1"
+                    android:width="10dp"
+                    android:backgroundTint="@color/blue"
+                    android:minWidth="10dp"
+                    android:text="UPDATE" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </FrameLayout>
+</LinearLayout>
