@@ -378,6 +378,7 @@
                                     android:layout_weight="1">
 
                                         <androidx.cardview.widget.CardView
+                                            android:id="@+id/requestBtn"
                                             android:layout_width="match_parent"
                                             android:layout_height="match_parent"
                                             app:cardCornerRadius="10dp"
@@ -396,7 +397,7 @@
                                                         <ImageView
                                                             android:layout_width="match_parent"
                                                             android:layout_height="wrap_content"
-                                                            app:srcCompat="@drawable/home_fav" />
+                                                            app:srcCompat="@drawable/ic_send" />
 
                                                         <LinearLayout
                                                             android:layout_width="match_parent"
@@ -409,7 +410,7 @@
                                                                     android:layout_width="match_parent"
                                                                     android:layout_height="wrap_content"
                                                                     android:gravity="center"
-                                                                    android:text="Starred"
+                                                                    android:text="Requests"
                                                                     android:textSize="18sp"
                                                                     android:textStyle="bold"/>
 

@@ -1,5 +1,6 @@
 package com.example.jobwave
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
@@ -66,5 +67,10 @@ class SupportServices : AppCompatActivity() {
             }.addOnFailureListener{ err ->
                 Toast.makeText(this, "Error ${err.message}", Toast.LENGTH_LONG).show()
             }
+    }
+
+    override fun onBackPressed() {
+        val setIntent = Intent(this, Dashboard::class.java)
+        startActivity(setIntent)
     }
 }
