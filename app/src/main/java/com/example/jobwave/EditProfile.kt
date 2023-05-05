@@ -121,4 +121,9 @@ class EditProfile : AppCompatActivity() {
 
     }
 
+    override fun onBackPressed() {
+        val setIntent = Intent(this, Dashboard::class.java)
+        startActivity(setIntent)
+    }
+
 }
