@@ -1,5 +1,5 @@
 <resources>
-<!--    User-->
+    <!--    User-->
     <string name="UserName">Shenal de Silva</string>
     <string name="profileDescription">"I'm passionate about software development and I'm looking forward to getting to work on new projects in the near future. "</string>
     <string name="profileIntro">Undergraduate at SLIIT</string>
@@ -7,13 +7,13 @@
     <string name="email">shenaldesilva17@gmail.com</string>
     <string name="phone">+94 75 843 6072</string>
 
-<!--    JOBS-->
+    <!--    JOBS-->
     <string name="jobtitle">Senior Designer</string>
     <string name="company">Apple</string>
     <string name="jobDescription">This exciting software engineer position will work on existing and emerging programs. Real-time software written will be used for on-orbit International Space Station functionality"</string>
 
 
-<!--    Company-->
+    <!--    Company-->
     <string name="compName">MCLarens</string>
     <string name="Owner">Shashi Perera</string>
     <string name="compEmail">shashiperera@gmail.com</string>
