@@ -26,5 +26,17 @@ class Home : Fragment() {
 
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+
+        val request = view.findViewById<androidx.cardview.widget.CardView>(R.id.requestBtn)
+
+        request.setOnClickListener{
+            requireActivity().run {
+                startActivity(Intent(this, SupportServices::class.java))
+                finish()
+            }
+        }
+    }
+
 
 }
