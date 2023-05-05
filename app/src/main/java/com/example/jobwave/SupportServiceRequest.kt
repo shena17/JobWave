@@ -4,8 +4,10 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import androidx.appcompat.widget.AppCompatButton
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
+import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.database.*
 
 class SupportServiceRequest : AppCompatActivity() {
@@ -13,6 +15,7 @@ class SupportServiceRequest : AppCompatActivity() {
     private lateinit var requestRecyclerView: RecyclerView
     private lateinit var requestList: ArrayList<SupportServicesModel>
     private lateinit var dbRef: DatabaseReference
+    private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -25,6 +28,17 @@ class SupportServiceRequest : AppCompatActivity() {
         requestList = arrayListOf<SupportServicesModel>()
 
         getRequestData()
+
+        val signOutBtn = findViewById<AppCompatButton>(R.id.signOut)
+
+        signOutBtn.setOnClickListener{
+            //Init and attach
+            auth = FirebaseAuth.getInstance();
+            //Call signOut()
+            auth.signOut();
+            startActivity(Intent(this, Login::class.java))
+            finish()
+        }
     }
 
     private fun getRequestData() {
