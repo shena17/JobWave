@@ -29,18 +29,6 @@
             android:layout_marginBottom="90dp"
             app:srcCompat="@drawable/logo_transparent" />
 
-
-        <Button
-            android:id="@+id/btn_all_job"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="See all Job Posts"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@color/white">
-
-        </Button>
-
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -49,19 +37,6 @@
             android:textAppearance="?android:textAppearanceMedium"
             android:textColor="@color/white"
             android:id="@+id/btn_PostJob"
-            android:layout_marginTop="20dp">
-        </Button>
-
-
-
-        <Button
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="10dp"
-            android:text="View Applicants"
-            android:textAppearance="?android:textAppearanceMedium"
-            android:textColor="@color/white"
-            android:id="@+id/btn_View_Applicants"
             android:layout_marginTop="20dp">
         </Button>
 
@@ -75,6 +50,7 @@
             android:id="@+id/btn_view_profile"
             android:layout_marginTop="20dp">
         </Button>
+
         <Button
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
