@@ -6,8 +6,11 @@ import android.os.Bundle
 import android.os.Handler
 import android.view.animation.AnimationUtils
 import android.widget.ImageView
+import com.google.firebase.auth.FirebaseAuth
 
 class MainActivity : AppCompatActivity() {
+
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -22,11 +25,13 @@ class MainActivity : AppCompatActivity() {
 
         //Splash screen
         val splashScreenTimeout = 2000
-        val homeIntent = Intent(this@MainActivity, Login::class.java)
+
 
         Handler().postDelayed({
-            startActivity(homeIntent)
-            finish()
+                val intent = Intent(this, Login::class.java)
+                startActivity(intent)
+
         }, splashScreenTimeout.toLong())
     }
+
 }

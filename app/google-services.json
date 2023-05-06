@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "971038491574",
+    "firebase_url": "https://jobwave-27a79-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "jobwave-27a79",
+    "storage_bucket": "jobwave-27a79.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:971038491574:android:5073af0d1a96f943e1f717",
+        "android_client_info": {
+          "package_name": "com.example.jobwave"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "971038491574-pu6akbrc07vo6h764pc0u3vprtdhciqk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAMQpGnQtOfq45aV_ti_s8wrkxzkOA5i9A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "971038491574-pu6akbrc07vo6h764pc0u3vprtdhciqk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -13,13 +13,48 @@
         android:theme="@style/Theme.JobWave"
         tools:targetApi="31">
         <activity
-            android:name=".EditProfile"
-            android:name=".ViewStaff"
+            android:name=".ReviewSupportServiceRequest"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"
                 android:value="" />
-
+        </activity>
+        <activity
+            android:name=".SupportServiceRequest"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".SupportServices"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditrequestsActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EditProfile"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".EmployerDashboard"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
             android:name=".ViewStaff"
             android:exported="false">
             <meta-data
@@ -49,20 +84,6 @@
         </activity>
         <activity
             android:name=".AddStaff"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Admin_menu"
-            android:exported="false">
-            <meta-data
-                android:name="android.app.lib_name"
-                android:value="" />
-        </activity>
-        <activity
-            android:name=".Add_Staff"
             android:exported="false">
             <meta-data
                 android:name="android.app.lib_name"

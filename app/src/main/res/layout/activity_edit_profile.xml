@@ -80,7 +80,6 @@
                                         android:layout_height="wrap_content"
                                         android:ems="10"
                                         android:inputType="textPersonName"
-                                        android:text="@string/UserName"
                                         android:layout_marginStart="20dp"/>
 
                                     <EditText
@@ -89,7 +88,6 @@
                                         android:layout_height="wrap_content"
                                         android:ems="10"
                                         android:inputType="textPersonName"
-                                        android:text="@string/profileIntro"
                                         android:layout_marginStart="20dp"
                                         android:textStyle="bold"
                                         android:textSize="12sp"
@@ -114,7 +112,6 @@
                                 android:layout_width="match_parent"
                                 android:layout_height="wrap_content"
                                 android:ems="10"
-                                android:text="@string/profileDescription"
                                 android:layout_marginStart="20dp"
                                 android:lines="3"
                                 android:inputType="textMultiLine|text"
@@ -191,7 +188,6 @@
                             android:layout_height="wrap_content"
                             android:ems="10"
                             android:inputType="textPersonName"
-                            android:text="@string/job"
                             android:layout_marginStart="20dp"
                             android:textStyle="bold"
                             android:textSize="18sp"
@@ -265,8 +261,8 @@
                             android:layout_marginStart="20dp"
                             android:ems="10"
                             android:inputType="textWebEmailAddress"
-                            android:text="@string/email"
                             android:textSize="18sp"
+                            android:enabled="false"
                             android:textStyle="bold" />
 
 
@@ -337,7 +333,6 @@
                             android:layout_marginStart="20dp"
                             android:ems="10"
                             android:inputType="number|phone"
-                            android:text="@string/phone"
                             android:textSize="18sp"
                             android:textStyle="bold" />
 
