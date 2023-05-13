@@ -17,7 +17,7 @@ class PostJobActivity : AppCompatActivity() {
         fabBtn=findViewById(R.id.fab_add);
 
         fabBtn.setOnClickListener(){
-            startActivity(Intent(applicationContext,NewJobPost::class.java))
+            startActivity(Intent(applicationContext,InsertJobPostActivity::class.java))
         }
     }
 }
