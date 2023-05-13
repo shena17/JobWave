@@ -31,7 +31,7 @@ class EmployerDashboard : AppCompatActivity() {
         btnPostJob = findViewById(R.id.btn_PostJob)
 
         btnPostJob.setOnClickListener(){
-            startActivity(Intent(applicationContext, InsertJobPostActivity::class.java))
+            startActivity(Intent(applicationContext, PostJobActivity::class.java))
         }
 
         btnAllJob.setOnClickListener(){
