@@ -13,11 +13,14 @@ import com.google.firebase.database.*
 import com.google.firebase.ktx.Firebase
 
 class Login : AppCompatActivity() {
-    private lateinit var auth: FirebaseAuth
+
     private lateinit var databaseReference: DatabaseReference
     private lateinit var uid: String
     private lateinit var user: Users
 
+    companion object {
+        lateinit var auth: FirebaseAuth
+    }
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
