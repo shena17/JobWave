@@ -30,6 +30,8 @@ class InsertJobPostActivity : AppCompatActivity() {
     private  lateinit var mAuth: FirebaseAuth
     private lateinit var mJobPost:DatabaseReference
 
+    private lateinit var mPublicDatabase:DatabaseReference
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_insert_job_post)
@@ -43,7 +45,9 @@ class InsertJobPostActivity : AppCompatActivity() {
         val mUser = mAuth.currentUser
         val uid = mUser?.uid
 
-        mJobPost = FirebaseDatabase.getInstance().getReference("Job Post")
+        mJobPost = uid?.let { FirebaseDatabase.getInstance().getReference().child(it) }!!
+
+        mPublicDatabase=FirebaseDatabase.getInstance().getReference().child("Job Post")
 
         InsertJob()
     }
@@ -87,6 +91,12 @@ class InsertJobPostActivity : AppCompatActivity() {
             if (id != null) {
                 mJobPost.child(id).setValue((emp))
             }
+
+            if (id != null) {
+                mPublicDatabase.child(id).setValue(emp)
+            }
+
+
 
             Toast.makeText(applicationContext,"Successfull",Toast.LENGTH_SHORT).show()
 

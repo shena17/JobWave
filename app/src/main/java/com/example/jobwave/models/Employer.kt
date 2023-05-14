@@ -11,6 +11,9 @@ data class Employer(
 
     var id:String= "",
     var date:String?=null
+
+
+
 ): Parcelable {
     constructor(parcel: Parcel) : this(
         parcel.readString() ?: "",
@@ -47,7 +50,39 @@ data class Employer(
     override fun toString(): String {
         return "Employer(title='$title', description='$description', skills='$skills', salary='$salary', id='$id', date='$date')"
     }
+
+    @JvmName("getTitle1")
+    fun getTitle(): String? {
+        return title
+    }
+
+    @JvmName("getDescription1")
+    fun getDescription(): String? {
+        return description
+    }
+
+    @JvmName("getSkills1")
+    fun getSkills(): String? {
+        return skills
+    }
+
+    @JvmName("getSalary1")
+    fun getSalary(): String? {
+        return salary
+    }
+
+    @JvmName("getId1")
+    fun getId(): String? {
+        return id
+    }
+
+    @JvmName("getDate1")
+    fun getDate(): String? {
+        return date
+    }
+
 }
+
 
 
 
