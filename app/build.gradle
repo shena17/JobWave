@@ -4,6 +4,14 @@ plugins {
     id 'com.google.gms.google-services'
 }
 
+task wrapper(type: Wrapper){
+    gradleVersion = '7.2'
+}
+
+task prepareKotlinBuildScriptModel {
+
+}
+
 android {
     namespace 'com.example.jobwave'
     compileSdk 33
