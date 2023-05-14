@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/back2">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:background="#0790B8"
+        android:layout_marginTop="4dp"
+        android:layout_marginBottom="4dp"
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_title"
+            tools:text="Job Title"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_description"
+            tools:text="Job Description"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_skills"
+            tools:text="Job Skills"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:id="@+id/tv_salary"
+            tools:text="Job Salary"
+            android:layout_height="wrap_content"
+            android:textSize="18dp"
+            android:textColor="@color/white" />
+
+        <ImageView
+            android:id="@+id/action_delete"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/ic_delete" />
+
+        <ImageView
+            android:id="@+id/action_edit"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginEnd="8dp"
+            android:src="@drawable/ic_baseline_update_24" />
+
+
+    </LinearLayout>
+
+</RelativeLayout>
