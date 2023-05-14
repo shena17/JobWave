@@ -12,9 +12,16 @@
         android:id="@+id/all_job_post">
     </include>
 
-    <androidx.recyclerview.widget.RecyclerView
+    <Button
+        android:id="@+id/btnReadJobs"
         android:layout_width="match_parent"
-        android:id="@+id/recycler_all_job"
-        android:layout_height="match_parent"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:text="View Jobs"
+        android:textAppearance="?android:textAppearanceMedium"
+        android:textColor="@color/white">
+
+    </Button>
+
 
 </LinearLayout>
