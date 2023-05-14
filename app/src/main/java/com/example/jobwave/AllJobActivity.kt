@@ -1,72 +1,117 @@
 package com.example.jobwave
 
+import android.content.Intent
 import android.os.Bundle
 import android.view.View
 import android.widget.TextView
-import android.widget.Toast
-import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.jobwave.adapter.EmployerAdapter
-import com.example.jobwave.adapter.ViewAdsAdapter
-import com.example.jobwave.databinding.ActivityAllJobBinding
 import com.example.jobwave.models.Employer
-import com.example.jobwave.services.EmployerServices
-import com.google.firebase.FirebaseApp
+import com.google.firebase.database.DatabaseReference
+import com.google.firebase.database.FirebaseDatabase
 
 class AllJobActivity : AppCompatActivity() {
 
-    private lateinit var binding: ActivityAllJobBinding
-    private var madapter: EmployerAdapter? = null
-    private lateinit var jobsAdapter: EmployerAdapter
-    private lateinit var jobsServices: EmployerServices
-    private lateinit var noRecordsTextView: TextView
-    private lateinit var recyclerViewjobs: RecyclerView
+    private lateinit var toolbar: Toolbar
+    private lateinit var recyclerView: RecyclerView
+
+    private lateinit var mAllJobPost: DatabaseReference
+    private lateinit var emp:Employer
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityAllJobBinding.inflate(layoutInflater)
-        //setContentView(R.layout.activity_main)
-
-        setContentView(binding.root)
+        setContentView(R.layout.activity_all_job)
 
 
-        recyclerViewjobs = findViewById(R.id.recyclerViewJobs)
-        noRecordsTextView = findViewById(R.id.noRecordsTextView)
-        recyclerViewjobs.layoutManager = LinearLayoutManager(this)
+        toolbar = findViewById(R.id.all_job_post)
+        setSupportActionBar(toolbar)
+        supportActionBar?.setTitle("All Job Post")
 
-        val firebaseApp = FirebaseApp.initializeApp(this)
-        if (firebaseApp != null) {
-            jobsServices = EmployerServices(firebaseApp)
-        } else {
-            Toast.makeText(this, "Failed to initialize Firebase", Toast.LENGTH_SHORT).show()
-            finish()
-            return
-        }
+        supportActionBar?.setHomeButtonEnabled(true)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        jobsServices.readAllJobs { jobs ->
-            if (jobs.isNotEmpty()) {
-                noRecordsTextView.visibility = View.GONE
-                jobsAdapter = EmployerAdapter(jobs) { job ->
-                    showDeleteConfirmationDialog(job as Employer)
-                }
-                recyclerViewjobs.adapter = jobsAdapter
-            } else {
-                noRecordsTextView.visibility = View.VISIBLE
-                recyclerViewjobs.visibility = View.GONE
+        recyclerView  = findViewById(R.id.recycler_all_job)
+
+        val linearLayoutManager = LinearLayoutManager(this)
+
+        linearLayoutManager.stackFromEnd
+        linearLayoutManager.reverseLayout
+
+        //Database
+        mAllJobPost = FirebaseDatabase.getInstance().getReference().child("Public Database")
+        mAllJobPost.keepSynced(true)
+
+        recyclerView.setHasFixedSize(true)
+        recyclerView.layoutManager
+
+
+    }
+
+    protected override fun onStart(){
+        super.onStart()
+
+    fun populateViewHolder(viewHolder: AllJobPostViewHolder) {
+        emp.getTitle()?.let { viewHolder.setJobTitle(it) }
+        emp.getDate()?.let { viewHolder.setJobDate(it) }
+        viewHolder.setJobDescription((emp.getDescription()))
+        emp.getSalary()?.let { viewHolder.setJobSalary(it) }
+
+        viewHolder.myView.setOnClickListener(View.OnClickListener() {
+            fun onClick(view: View){
+                val intent = Intent(applicationContext,JobDetailsActivity::class.java)
+
+                intent.putExtra("title",emp.getTitle())
+                intent.putExtra("date",emp.getDate())
+                intent.putExtra("description",emp.getDescription())
+                intent.putExtra("skills",emp.getSkills())
+                intent.putExtra("salary",emp.getSkills())
+
+                startActivity(intent)
             }
-        }
+        })
 
+    }
+        recyclerView.adapter
 
     }
 
-    private fun setAdapter(list: Unit) {
-        madapter?.setData(list)
-    }
+     class AllJobPostViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
-    private fun showDeleteConfirmationDialog(job: Employer) {
+         val myView:View
+             get() {
+                 TODO()
+             }
 
+         public fun AllJobPostViewHolder(itemView: View){
+             super.itemView
+         }
+
+         public fun setJobTitle(title: String) {
+             val mTitle: TextView = myView.findViewById(R.id.all_job_post_title)
+             mTitle.text = title
+         }
+
+         public fun setJobDate(date: String) {
+             val mDate: TextView = myView.findViewById(R.id.all_job_post_date)
+             mDate.text = date
+         }
+
+         public fun setJobDescription(description: String?) {
+             val mDescription: TextView = myView.findViewById(R.id.all_job_post_description)
+             mDescription.text = description
+         }
+
+         public fun setJobSkills(skills: String) {
+             val mSkills: TextView = myView.findViewById(R.id.all_job_post_skills)
+             mSkills.text = skills
+         }
+
+         public fun setJobSalary(salary: String) {
+             val mSalary: TextView = myView.findViewById(R.id.all_job_post_salary)
+             mSalary.text = salary
+         }
     }
 }
 

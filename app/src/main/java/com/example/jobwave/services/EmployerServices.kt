@@ -87,7 +87,7 @@ class EmployerServices(firebaseApp: FirebaseApp) {
     }
 
     // Delete job from the Firebase Database based on its key
-    fun deleteJob(id: String, callback: (Boolean) -> Unit) {
+    fun deleteJob(id: Employer, callback: (Boolean) -> Unit) {
         // Remove the job at the specified key location from the database
         jobsRef.child(id.toString()).removeValue()
             .addOnSuccessListener {

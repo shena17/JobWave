@@ -9,7 +9,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.jobwave.R
 import com.example.jobwave.models.Employer
 
-class EmployerAdapter(jobs: List<Employer>, param: (Any) -> Unit) :RecyclerView.Adapter<EmployerAdapter.EmployerViewHolder>(){
+class EmployerAdapter :RecyclerView.Adapter<EmployerAdapter.EmployerViewHolder>(){
 
     private var list = mutableListOf<Employer>()
     private  var actionEdit :((Employer)->Unit)? = null

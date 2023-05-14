@@ -8,6 +8,7 @@ import android.os.Bundle
 import android.view.View
 import android.widget.Adapter
 import android.widget.TextView
+import androidx.appcompat.widget.Toolbar
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.jobwave.adapter.EmployerAdapter
@@ -33,9 +34,11 @@ class PostJobActivity : AppCompatActivity() {
 
     private lateinit var emp:Employer
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_job)
+
 
         fabBtn = findViewById(R.id.fab_add)
 
