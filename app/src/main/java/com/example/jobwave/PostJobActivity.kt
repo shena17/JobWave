@@ -35,8 +35,6 @@ class PostJobActivity : AppCompatActivity() {
     private lateinit var emp:Employer
 
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_post_job)

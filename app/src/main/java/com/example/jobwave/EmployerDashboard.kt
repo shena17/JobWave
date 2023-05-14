@@ -16,6 +16,7 @@ class EmployerDashboard : AppCompatActivity() {
     private lateinit var btnAllJob:Button
 
     private lateinit var btnUpdateJob:Button
+    private lateinit var btnDeleteJob:Button
 
     private lateinit var toolbar: Toolbar
 
@@ -34,6 +35,8 @@ class EmployerDashboard : AppCompatActivity() {
 
         btnPostJob = findViewById(R.id.btn_PostJob)
 
+        btnDeleteJob = findViewById(R.id.btn_delete_job)
+
         btnPostJob.setOnClickListener(){
             startActivity(Intent(applicationContext, PostJobActivity::class.java))
         }
@@ -44,6 +47,10 @@ class EmployerDashboard : AppCompatActivity() {
 
         btnUpdateJob.setOnClickListener(){
             startActivity(Intent(applicationContext,UpdateData::class.java))
+        }
+
+        btnDeleteJob.setOnClickListener(){
+            startActivity(Intent(applicationContext,DeleteData::class.java))
         }
 
         val signOutBtn = findViewById<AppCompatButton>(R.id.signOut)
