@@ -3,6 +3,7 @@ package com.example.jobwave
 import android.content.Intent
 import android.os.Bundle
 import android.view.View
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.Toolbar
@@ -29,10 +30,8 @@ class AllJobActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
         supportActionBar?.setTitle("All Job Post")
 
-        supportActionBar?.setHomeButtonEnabled(true)
-        supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
-        recyclerView  = findViewById(R.id.recycler_all_job)
+       // recyclerView  = findViewById(R.id.recycler_all_job)
 
         val linearLayoutManager = LinearLayoutManager(this)
 
@@ -42,10 +41,6 @@ class AllJobActivity : AppCompatActivity() {
         //Database
         mAllJobPost = FirebaseDatabase.getInstance().getReference().child("Public Database")
         mAllJobPost.keepSynced(true)
-
-        recyclerView.setHasFixedSize(true)
-        recyclerView.layoutManager
-
 
     }
 
