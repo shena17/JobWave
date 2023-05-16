@@ -141,6 +141,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
     }
 
     private fun initView() {
+
         tvName.text = intent.getStringExtra("name_f")
         tvEmail.text = intent.getStringExtra("email_f")
         tvConcern.text = intent.getStringExtra("concern_f")
