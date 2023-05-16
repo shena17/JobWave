@@ -56,6 +56,7 @@ class SupportServiceRequest : AppCompatActivity() {
             override fun onDataChange(snapshot: DataSnapshot) {
 
                 requestList.clear()
+
                 if (snapshot.exists()){
                     for (requestSnap in snapshot.children){
                         val requestData = requestSnap.getValue(SupportServicesModel::class.java)
