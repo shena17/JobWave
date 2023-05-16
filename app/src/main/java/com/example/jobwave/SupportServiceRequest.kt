@@ -33,6 +33,7 @@ class SupportServiceRequest : AppCompatActivity() {
         val signOutBtn = findViewById<AppCompatButton>(R.id.signOut)
 
         signOutBtn.setOnClickListener{
+
             //Init and attach
             auth = FirebaseAuth.getInstance();
             //Call signOut()
