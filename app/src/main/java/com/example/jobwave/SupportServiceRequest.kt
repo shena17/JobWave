@@ -46,6 +46,7 @@ class SupportServiceRequest : AppCompatActivity() {
     }
 
     private fun getRequestData() {
+
         requestRecyclerView.visibility = View.GONE
 
         dbRef = FirebaseDatabase.getInstance().getReference("Requests")
