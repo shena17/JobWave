@@ -36,6 +36,7 @@ class SupportServiceRequest : AppCompatActivity() {
 
             //Init and attach
             auth = FirebaseAuth.getInstance();
+
             //Call signOut()
             auth.signOut();
             startActivity(Intent(this, Login::class.java))
