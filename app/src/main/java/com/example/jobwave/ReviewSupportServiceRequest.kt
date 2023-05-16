@@ -24,6 +24,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         setContentView(R.layout.activity_review_support_service_request)
 
         initView()
+
         setValuesToViews()
 
         editbtn.setOnClickListener {
