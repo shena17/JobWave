@@ -88,6 +88,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         val etConcern = mDialogView.findViewById<EditText>(R.id.etConcern)
         val btnEditData = mDialogView.findViewById<EditText>(R.id.btnEditData)
 
+
         etName.setText(intent.getStringExtra("name_f").toString())
         etEmail.setText(intent.getStringExtra("email_f").toString())
         etConcern.setText(intent.getStringExtra("concern_f").toString())
