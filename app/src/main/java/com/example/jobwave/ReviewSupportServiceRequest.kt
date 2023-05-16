@@ -16,7 +16,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
     private lateinit var tvEmail : TextView
     private lateinit var tvConcern : TextView
     private lateinit var editbtn : Button
-    private lateinit var deletebtn: Button
+    private lateinit var deletebtn : Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
