@@ -41,6 +41,7 @@ class SupportServiceRequest : AppCompatActivity() {
             auth.signOut();
             startActivity(Intent(this, Login::class.java))
             finish()
+
         }
     }
 
