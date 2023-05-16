@@ -49,6 +49,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
     }
 
     private fun deleteRecord(
+
         id: String
     ) {
         val dbRef = FirebaseDatabase.getInstance().getReference("Requests").child(id)
