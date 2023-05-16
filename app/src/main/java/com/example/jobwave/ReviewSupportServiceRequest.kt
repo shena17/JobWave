@@ -154,5 +154,6 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         setIntent.addCategory(Intent.CATEGORY_HOME)
         setIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
         startActivity(setIntent)
+
     }
 }
