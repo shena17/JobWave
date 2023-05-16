@@ -40,6 +40,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         deletebtn.setOnClickListener {
 
             deleteRecord(
+
                 intent.getStringExtra("cusId").toString()
             )
         }
