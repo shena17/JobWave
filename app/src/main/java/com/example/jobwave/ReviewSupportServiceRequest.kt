@@ -59,6 +59,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         mTask.addOnSuccessListener {
 
             Toast.makeText(this, "Data record deleted", Toast.LENGTH_SHORT).show()
+
             val intent = Intent(this, SupportServiceRequest::class.java)
             finish()
             startActivity(intent)
