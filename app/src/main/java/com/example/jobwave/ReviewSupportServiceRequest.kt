@@ -149,6 +149,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
     }
 
     override fun onBackPressed() {
+
         val setIntent = Intent(Intent.ACTION_MAIN)
         setIntent.addCategory(Intent.CATEGORY_HOME)
         setIntent.flags = Intent.FLAG_ACTIVITY_NEW_TASK
