@@ -108,7 +108,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
                 etConcern.text.toString()
             )
 
-            //Toast message about the successful updating of dara
+            //Toast message about the successful updating of data
             Toast.makeText(applicationContext, "Data Updated Successfully", Toast.LENGTH_LONG).show()
 
             //Setting updated data to textviews
