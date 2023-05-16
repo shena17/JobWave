@@ -63,6 +63,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
             val intent = Intent(this, SupportServiceRequest::class.java)
             finish()
             startActivity(intent)
+
         }.addOnFailureListener{ error ->
             Toast.makeText(this, "Error while deleting ${error.message}", Toast.LENGTH_SHORT).show()
         }
