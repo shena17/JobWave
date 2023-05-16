@@ -65,6 +65,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
             startActivity(intent)
 
         }.addOnFailureListener{ error ->
+
             Toast.makeText(this, "Error while deleting ${error.message}", Toast.LENGTH_SHORT).show()
         }
     }
