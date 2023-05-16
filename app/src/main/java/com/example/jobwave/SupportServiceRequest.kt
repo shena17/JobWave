@@ -58,6 +58,7 @@ class SupportServiceRequest : AppCompatActivity() {
                 requestList.clear()
 
                 if (snapshot.exists()){
+
                     for (requestSnap in snapshot.children){
                         val requestData = requestSnap.getValue(SupportServicesModel::class.java)
                         requestList.add(requestData!!)
