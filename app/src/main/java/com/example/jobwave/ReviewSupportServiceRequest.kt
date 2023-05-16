@@ -33,6 +33,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
 
                 intent.getStringExtra("cusId").toString(),
                 intent.getStringExtra("name_f").toString()
+
             )
         }
 
