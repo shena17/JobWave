@@ -54,6 +54,7 @@ class SupportServiceRequest : AppCompatActivity() {
         dbRef.addValueEventListener(object : ValueEventListener {
 
             override fun onDataChange(snapshot: DataSnapshot) {
+
                 requestList.clear()
                 if (snapshot.exists()){
                     for (requestSnap in snapshot.children){
