@@ -145,6 +145,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         tvName.text = intent.getStringExtra("name_f")
         tvEmail.text = intent.getStringExtra("email_f")
         tvConcern.text = intent.getStringExtra("concern_f")
+
     }
 
     override fun onBackPressed() {
