@@ -52,6 +52,7 @@ class SupportServiceRequest : AppCompatActivity() {
         dbRef = FirebaseDatabase.getInstance().getReference("Requests")
 
         dbRef.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
                 requestList.clear()
                 if (snapshot.exists()){
