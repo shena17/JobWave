@@ -57,6 +57,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
         val mTask = dbRef.removeValue()
 
         mTask.addOnSuccessListener {
+
             Toast.makeText(this, "Data record deleted", Toast.LENGTH_SHORT).show()
             val intent = Intent(this, SupportServiceRequest::class.java)
             finish()
