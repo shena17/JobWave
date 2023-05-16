@@ -13,7 +13,7 @@ import com.google.firebase.database.FirebaseDatabase
 class ReviewSupportServiceRequest : AppCompatActivity() {
 
     private lateinit var tvName : TextView
-    private lateinit var tvEmail: TextView
+    private lateinit var tvEmail : TextView
     private lateinit var tvConcern: TextView
     private lateinit var editbtn: Button
     private lateinit var deletebtn: Button
