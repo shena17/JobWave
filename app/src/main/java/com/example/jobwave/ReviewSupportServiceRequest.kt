@@ -137,7 +137,7 @@ class ReviewSupportServiceRequest : AppCompatActivity() {
     }
 
     private fun setValuesToViews() {
-        TODO("Not yet implemented")
+
     }
 
     private fun initView() {
