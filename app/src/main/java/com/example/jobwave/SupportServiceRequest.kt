@@ -18,6 +18,7 @@ class SupportServiceRequest : AppCompatActivity() {
     private lateinit var auth: FirebaseAuth
 
     override fun onCreate(savedInstanceState: Bundle?) {
+
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_support_service_request)
 
@@ -32,24 +33,32 @@ class SupportServiceRequest : AppCompatActivity() {
         val signOutBtn = findViewById<AppCompatButton>(R.id.signOut)
 
         signOutBtn.setOnClickListener{
+
             //Init and attach
             auth = FirebaseAuth.getInstance();
+
             //Call signOut()
             auth.signOut();
             startActivity(Intent(this, Login::class.java))
             finish()
+
         }
     }
 
     private fun getRequestData() {
+
         requestRecyclerView.visibility = View.GONE
 
         dbRef = FirebaseDatabase.getInstance().getReference("Requests")
 
         dbRef.addValueEventListener(object : ValueEventListener {
+
             override fun onDataChange(snapshot: DataSnapshot) {
+
                 requestList.clear()
+
                 if (snapshot.exists()){
+
                     for (requestSnap in snapshot.children){
                         val requestData = requestSnap.getValue(SupportServicesModel::class.java)
                         requestList.add(requestData!!)
